@@ -1,0 +1,90 @@
+@import url(nav.css);
+:root,body{
+    width:100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Abel', sans-serif;
+    overflow-x: hidden;
+}
+body{
+    background-color: rgba(14, 19, 28, 0.864);
+    position: absolute;
+}
+.img{
+    width: 30vmin;
+    display: inline-block;
+    animation-name: kodMiDios;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+}
+.containerImg{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.liImg{
+    height: calc(30vmin + 5px);
+    margin:5px;
+    position: relative;
+}
+.liImg:hover{
+    z-index: 100;
+
+}
+span{
+    position: absolute;
+    z-index: 10;
+    color: rgb(230, 230, 230);
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    font-size: 6vmin;
+    font-weight: bold;
+    opacity: 0;
+    pointer-events: none;
+}
+.img:hover{
+    animation-name: pgodMiDios;
+    animation-duration: 50ms;
+    animation-fill-mode: forwards;
+    z-index: 100;
+    
+}
+@keyframes pgodMiDios {
+    100%{
+        opacity: 60%;
+        transform: scale(1.1);
+        
+    }
+}
+@keyframes kodMiDios {
+    100%{
+    }
+    0%{
+        opacity: 60%;
+        transform: scale(1.1);
+    }
+}
+h1{
+    font-size: 5vmin;
+    color: antiquewhite;
+    
+}
+.containerFlex{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.liImg:hover{
+    span{
+        opacity: 1;
+    }
+
+}
+html, body {
+    overflow-x:hidden 
+} 

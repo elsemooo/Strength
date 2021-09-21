@@ -1,0 +1,32 @@
+h1{
+    margin-left: 20px;
+    grid-column: 1/-1;
+}
+p{
+    color: antiquewhite;
+    margin-left: 20px;
+    font-size: 5vmin;    
+}
+.imgDiagnostic{
+    width: 70vmin;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.service{
+    display: grid;
+    grid-template-rows: 15vmin 50vmin;
+    grid-template-columns: 2fr 1fr ;
+    grid-column-gap: 15px;
+    align-items: center;
+    justify-items: center;
+}
+@media (max-width: 950px) {
+    .service{
+        grid-template-columns: 100%;
+        grid-template-rows: 15vmin 70vmin 35vmin;
+    }
+}
+.imgDiagnostic{
+    margin-right: 20px;
+}

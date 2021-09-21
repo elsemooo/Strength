@@ -1,0 +1,138 @@
+@import url(nav.css);
+:root, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Abel', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: rgba(14, 19, 28, 0.864);
+  position: absolute;
+}
+
+.img {
+  width: 30vmin;
+  display: inline-block;
+  -webkit-animation-name: kodMiDios;
+          animation-name: kodMiDios;
+  -webkit-animation-duration: 100ms;
+          animation-duration: 100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.containerImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.liImg {
+  height: calc(30vmin + 5px);
+  margin: 5px;
+  position: relative;
+}
+
+.liImg:hover {
+  z-index: 100;
+}
+
+span {
+  position: absolute;
+  z-index: 10;
+  color: #e6e6e6;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  font-size: 6vmin;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.img:hover {
+  -webkit-animation-name: pgodMiDios;
+          animation-name: pgodMiDios;
+  -webkit-animation-duration: 50ms;
+          animation-duration: 50ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 100;
+}
+
+@-webkit-keyframes pgodMiDios {
+  100% {
+    opacity: 60%;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes pgodMiDios {
+  100% {
+    opacity: 60%;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@-webkit-keyframes kodMiDios {
+  100% {
+  }
+  0% {
+    opacity: 60%;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes kodMiDios {
+  100% {
+  }
+  0% {
+    opacity: 60%;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+h1 {
+  font-size: 5vmin;
+  color: antiquewhite;
+}
+
+.containerFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.liImg:hover span {
+  opacity: 1;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/strengthFavicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c533591037.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contacto.css">
+    <script src="js.js" defer></script>
+    <link rel="stylesheet" href="styles/nav.css">
+    <title>Contactame</title>
+</head>
+<body>
+    <nav class="containerNav">
+        <a href="index.html" class="imgLink"><img class="logoBtn" src="images/strengthFavicon.png" alt=""></a>
+        <ul class="botonera">
+            <div class="containerUl">
+                <li class="botones start"><a class="link" href="servicios.html">Servicios</a></li>
+                <li class="botones end"><a class="link" href="contacto.html">Contactame</a></li>
+            </div>
+        </ul>
+        <button id="menuToggle" class="menuBtn"><i class="menuImg fas fa-bars"></i></button>
+        <ul class="navMobile">
+            <li class="botones start"><a class="linkMobile" href="servicios.html">Servicios</a></li>
+            <li class="botones end"><a class="linkMobile" href="contacto.html">Contactame</a></li>
+        </ul>
+    </nav>
+    <section class="contact">
+        <div class="u-wrapper">
+            <div class="contact-content">
+    
+            <form id="form" class="form" action="https://formspree.io/f/xnqlwdqk"
+            method="POST" >
+                <h3 class="tag"><span>HABLEMOS</span></h3>
+                <label for="name">Nombre Completo <span>*</span></label>
+                <input name="name" required type="text" id="name" placeholder="Juan">
+                <label for="email">Correo electrónico <span>*</span></label>
+                <input name="email" type="text" id="email" required placeholder="juan@gmail.com">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+                <button type="submit" class="btn primary full">enviar mensaje</button>
+            </form>
+            <a href="mailto:mathiaskalid@gmail.com" id="trucazo"></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <a href="https://wa.me/message/AZHI4CPBSVSZO1" target="_blank"><p>powered by <b>CMO</b></p></a>
+    </footer>
+    <script>
+        const $form = document.querySelector("#form");
+        $form.addEventListener("submit", handleSubmit)
+        
+        async function handleSubmit(event){
+            event.preventDefault()
+            const form = new FormData(this);
+            const response = await fetch(this.action, {
+                method: this.method,
+                body: form,
+                headers: {
+                    "Accept": 'Application/json'
+                }
+            })
+            if(response.ok){
+                this.reset()
+                alert("gracias por contactarme, respondere pronto :). ")
+            }
+        }
+    </script>
+</body>
+</html>

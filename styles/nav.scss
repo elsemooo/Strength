@@ -1,0 +1,120 @@
+@import url(footer.css);
+:root,body{
+    width:100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Abel', sans-serif;
+    overflow-x: hidden;
+}
+body{
+    background-color: rgba(14, 19, 28, 0.864);
+    position: absolute;
+}
+nav{
+    background-color: rgb(14,19,28);
+    display: flex;
+    align-items: center;
+}
+#openMenu,#closeMenu,#menuToggle{
+    display: none;
+}
+a,ul,li.botones{
+    color: rgb(233,5,56);
+    list-style: none;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+.link{
+    margin: 0 20px 0 20px;
+}
+li,a{
+    position: relative;
+}
+a.link:hover:after{
+    content: "";
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius: 3px;
+    position: absolute;
+    background-color: rgb(233,5,56);
+}
+.imgLink{
+    width: 40%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: antiquewhite;
+}
+.logoBtn{
+    justify-self: center;
+    margin-right: 10px;
+
+}
+ul{
+    width: 30%;
+}
+.containerUl{
+    margin: 0 50% 0 50%;
+    
+}
+.navMobile{
+    display: none;
+}
+@media (max-width: 950px){
+    #menuToggle{
+        display: inline-block;
+        border: none;
+        color: antiquewhite;
+        background: none;
+        box-shadow: none;
+        transform: scale(1.4);
+        pointer-events: all;
+        margin: 20px;
+    }
+    .containerNav{
+        justify-content: space-between;
+        position: relative;
+    }
+    .botonera{
+        display: none;
+    }
+    .navMobile{
+        display: flex;
+        background-color:rgb(14,19,28);
+        flex-wrap: wrap;
+        padding: 5px;
+        padding-right: 10%;
+        justify-content: flex-start;
+        position: absolute;
+        flex-direction: column;
+        top: 70px;
+        right: -100%;
+        z-index: 200;
+    }
+    .navMobile.active{
+        animation-name: dylanEsCabro;
+        animation-duration: 100ms;
+        animation-fill-mode: forwards;
+    }
+    @keyframes dylanEsCabro {
+        100%{
+            right: 0;
+        }
+    }
+    
+}
+@media (min-width: 500px){
+    .navMobile{
+        padding-right: 5px;
+    }
+}
