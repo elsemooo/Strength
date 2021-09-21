@@ -1,14 +1,25 @@
 footer {
     width: 100vw;
-    height: 20vh;
+    height: 30vh;
     background-color: rgb(14,19,28);
     display: flex;
     align-items: center;
-    justify-content: center;
     position: relative;
     bottom: 0;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
-
+.redesSociales{
+    display: flex;
+}
+.gozu{
+    margin:10px;
+}
+box-icon{
+    transform: scale(1.2);
+}
 p,b{
     color: antiquewhite;
     font-size: 4vmin;
